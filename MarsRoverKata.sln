@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverDemo", "MarsRoverTrioPrograming\MarsRoverDemo.csproj", "{CD82004C-D768-49DB-9271-DFF2DCB9E869}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverKata", "MarsRoverKata\MarsRoverDemo.csproj", "{CD82004C-D768-49DB-9271-DFF2DCB9E869}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
