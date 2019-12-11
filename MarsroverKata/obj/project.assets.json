@@ -5911,11 +5911,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/adriaarki/Katas/MarsRoverKata/MarsRoverKata/MarsRoverDemo.csproj",
+      "projectUniqueName": "/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/MarsRoverDemo.csproj",
       "projectName": "MarsRoverDemo",
-      "projectPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsRoverKata/MarsRoverDemo.csproj",
+      "projectPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/MarsRoverDemo.csproj",
       "packagesPath": "/Users/adriaarki/.nuget/packages/",
-      "outputPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsRoverKata/obj/",
+      "outputPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/adriaarki/.config/NuGet/NuGet.Config"
@@ -5968,8 +5968,7 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
