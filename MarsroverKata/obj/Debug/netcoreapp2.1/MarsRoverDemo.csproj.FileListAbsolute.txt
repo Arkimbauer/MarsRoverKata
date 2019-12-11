@@ -1,0 +1,13 @@
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/Users/adriaarki/Katas/MarsRoverKata/MarsRoverKata/bin/Debug/netcoreapp2.1/MarsRoverDemo.deps.json
+/Users/adriaarki/Katas/MarsRoverKata/MarsRoverKata/bin/Debug/netcoreapp2.1/MarsRoverDemo.runtimeconfig.json
+/Users/adriaarki/Katas/MarsRoverKata/MarsRoverKata/bin/Debug/netcoreapp2.1/MarsRoverDemo.runtimeconfig.dev.json
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/bin/Debug/netcoreapp2.1/MarsRoverDemo.dll
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/bin/Debug/netcoreapp2.1/MarsRoverDemo.pdb
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/obj/Debug/netcoreapp2.1/MarsRoverDemo.csprojAssemblyReference.cache
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/obj/Debug/netcoreapp2.1/MarsRoverDemo.AssemblyInfoInputs.cache
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/obj/Debug/netcoreapp2.1/MarsRoverDemo.AssemblyInfo.cs
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/obj/Debug/netcoreapp2.1/MarsRoverDemo.dll
+/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/obj/Debug/netcoreapp2.1/MarsRoverDemo.pdb

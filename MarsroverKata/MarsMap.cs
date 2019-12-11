@@ -9,17 +9,6 @@ namespace MarsRoverDemo
         private readonly int _width;
         private readonly int _height;
         private readonly List<Axis> _gridPositions = new List<Axis>();
-        private readonly Dictionary<Compass, Action<Axis>> _navigateTo = new Dictionary<Compass, Action<Axis>>
-        {
-            {Compass.N, (axisToChange)=> { axisToChange.MoveNorth(); }},
-            {Compass.NE, (axisToChange)=> { axisToChange.MoveNorthEast(); }},
-            {Compass.E, (axisToChange)=> { axisToChange.MoveEast(); }},
-            {Compass.SE, (axisToChange)=> { axisToChange.MoveSouthEast(); }},
-            {Compass.S, (axisToChange)=> { axisToChange.MoveSouth(); }},
-            {Compass.SW, (axisToChange)=> { axisToChange.MoveSouthWest(); }},
-            {Compass.W, (axisToChange)=> { axisToChange.MoveWest(); }},
-            {Compass.NW, (axisToChange)=> { axisToChange.MoveNorthWest(); }},
-        };
 
         public MarsMap()
         {
@@ -32,25 +21,30 @@ namespace MarsRoverDemo
         {
             var cloneAxis = axis.CloneAxis();
 
-            _navigateTo[compass](cloneAxis);
+            new NavigateToDictionary(compass, cloneAxis);
 
             if (_gridPositions.Contains(cloneAxis))
             {
-                _navigateTo[compass](axis);
+                new NavigateToDictionary(compass, axis);
             }
         }
 
         private void GenerateGridPositionsList(int width, int height)
         {
             var count = 0;
-            for (int i = 0; i <= width; i++)
+            for (int positionX = 0; positionX <= width; positionX++)
             {
-                for (int y = 0; y <= width; y++)
-                {
-                    _gridPositions.Add(new Axis(count, y));
-                }
+                GeneratePositionYGrid(width, count);
                 count++;
             }
         }
+
+        private void GeneratePositionYGrid(int width, int count)
+        {
+            for (int positionY = 0; positionY <= width; positionY++)
+            {
+                _gridPositions.Add(new Axis(count, positionY));
+            }
+        }
     }
-}
+}   

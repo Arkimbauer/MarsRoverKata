@@ -20,6 +20,7 @@
         <e p="MarsRoverDemo.csproj" t="IncludeRecursive" />
         <e p="MarsRoverShould.cs" t="Include" />
         <e p="Navigate.cs" t="Include" />
+        <e p="NavigateToDictionary.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
