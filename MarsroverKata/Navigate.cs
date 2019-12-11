@@ -15,6 +15,8 @@ namespace MarsRoverDemo
 
         public void Move()
         {
+            //_marsMap.NavigateTo(_direction._compass, _axis);
+            
             if (_direction == new Direction(Compass.N))
             {
                 _marsMap.NavigateTo(Compass.N, _axis);

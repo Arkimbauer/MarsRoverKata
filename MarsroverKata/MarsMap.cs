@@ -20,7 +20,7 @@ namespace MarsRoverDemo
         public void NavigateTo(Compass compass, Axis axis)
         {
             var cloneAxis = axis.CloneAxis();
-
+            
             new NavigateToDictionary(compass, cloneAxis);
 
             if (_gridPositions.Contains(cloneAxis))

@@ -2,7 +2,7 @@ namespace MarsRoverDemo
 {
     public class Direction
     {
-        private Compass _compass;
+        public Compass _compass;
 
         public Direction(Compass compass)
         {
