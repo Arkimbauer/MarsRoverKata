@@ -2,73 +2,73 @@ namespace MarsRoverDemo
 {
     public class Axis
     {
-        public int PositionY;
-        public int PositionX;
+        private int _positionY;
+        private int _positionX;
 
         public Axis(int positionY, int positionX)
         {
-            PositionY = positionY;
-            PositionX = positionX;
+            _positionY = positionY;
+            _positionX = positionX;
         }
 
         public void MoveNorth()
         {
-            PositionY++;
+            _positionY++;
         }
 
         public void MoveEast()
         {
-            PositionX++;
+            _positionX++;
         }
 
         public void MoveSouth() 
         {
-            PositionY--;
+            _positionY--;
         }
 
         public void MoveWest()
         {
-            PositionX--;
+            _positionX--;
         }
 
         public void MoveNorthEast()
         {
-            PositionX++;
-            PositionY++;    
+            _positionX++;
+            _positionY++;    
         }
 
         public void MoveSouthEast()
         {
-            PositionX++;
-            PositionY--;
+            _positionX++;
+            _positionY--;
         }
 
         public void MoveSouthWest()
         {
-            PositionX--;
-            PositionY--;
+            _positionX--;
+            _positionY--;
         }
 
         public void MoveNorthWest()
         {
-            PositionX--;
-            PositionY++;
+            _positionX--;
+            _positionY++;
         }
 
         public override string ToString()
         {
-            return PositionX+":"+PositionY;
+            return _positionX+":"+_positionY;
         }
 
         public Axis CloneAxis()
         {   
-            var cloneAxis = new Axis(PositionY, PositionX);
+            var cloneAxis = new Axis(_positionY, _positionX);
             return cloneAxis;
         }
 
         protected bool Equals(Axis other)
         {
-            return PositionY == other.PositionY && PositionX == other.PositionX;
+            return _positionY == other._positionY && _positionX == other._positionX;
         }
 
         public override bool Equals(object obj)
@@ -83,7 +83,7 @@ namespace MarsRoverDemo
         {
             unchecked
             {
-                return (PositionY * 397) ^ PositionX;
+                return (_positionY * 397) ^ _positionX;
             }
         }
 
