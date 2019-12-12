@@ -8,15 +8,11 @@ namespace MarsRoverDemo
         public static Commands GenerateCommandFromText(char charCommand)
         {
             if (charCommand == MoveCommand)
-            {
                 return Commands.Move;
-            }
 
             if (charCommand == TurnLeftCommand)
-            {
                 return Commands.Left;
-            }
-            
+
             return Commands.Right;
         }
     }

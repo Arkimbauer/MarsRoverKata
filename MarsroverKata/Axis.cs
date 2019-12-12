@@ -66,7 +66,7 @@ namespace MarsRoverDemo
             return cloneAxis;
         }
 
-        protected bool Equals(Axis other)
+        private bool Equals(Axis other)
         {
             return _positionY == other._positionY && _positionX == other._positionX;
         }

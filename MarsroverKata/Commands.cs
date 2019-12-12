@@ -2,8 +2,6 @@ namespace MarsRoverDemo
 {
     public enum Commands
     {
-        Move,
-        Right,
-        Left
+        Move, Right, Left
     }
 }

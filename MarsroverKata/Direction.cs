@@ -41,7 +41,7 @@ namespace MarsRoverDemo
             return _compass.ToString();
         }
 
-        protected bool Equals(Direction other)
+        private bool Equals(Direction other)
         {
             return _compass == other._compass;
         }

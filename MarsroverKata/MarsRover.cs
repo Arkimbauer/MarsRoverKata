@@ -26,19 +26,13 @@ namespace MarsRoverDemo
         private void ExecuteCommand(Commands command)
         {
             if (command == Commands.Move)
-            {   
                 _navigate.Move();
-            }
 
             if (command == Commands.Right)
-            {
                 _navigate.TurnRight();
-            }
 
             if (command == Commands.Left)
-            {
                 _navigate.TurnLeft();
-            }
         }
     }
 }
