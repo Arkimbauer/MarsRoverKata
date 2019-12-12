@@ -5,10 +5,18 @@ namespace MarsRoverDemo.Test
     public class MarsRoverShould    
     {
         private readonly MarsRover _marsRover;
+        private readonly MarsRover _marsRoverWithStartNavigate;
+        private readonly MarsRover _marsRoverWithObstacleOnXOneYOne;
 
-        public MarsRoverShould()
+        public MarsRoverShould( )
         {
+            var startNavigateWithObstacle = new Navigate(Compass.N, 0,0, new Axis(0, 1));
+            _marsRoverWithObstacleOnXOneYOne = new MarsRover(startNavigateWithObstacle);
+
             _marsRover = new MarsRover();
+
+            var startNavigate = new Navigate(Compass.N, 1, 1);
+            _marsRoverWithStartNavigate = new MarsRover(startNavigate);
         }
 
         [Fact]
@@ -68,13 +76,11 @@ namespace MarsRoverDemo.Test
         [InlineData("0:0:SW", "LLLM")]
         public void MoveOnePositionForEachCompassDirection(string expectedPosition, string commands)
         {
-            var startNavigate = new Navigate(Compass.N, 1, 1);
-            var marsRover = new MarsRover(startNavigate);
-            var position = marsRover.Execute(commands);
+            var position = _marsRoverWithStartNavigate.Execute(commands);
             Assert.Equal(expectedPosition, (string) position);
         }
 
-        [Theory]
+        [Theory]    
         [InlineData("0:0:W", "LLM")]
         [InlineData("0:0:S", "RRRRM")]
         [InlineData("0:0:SW", "LLLM")]
@@ -97,11 +103,16 @@ namespace MarsRoverDemo.Test
         [InlineData("0:0:SW", "LLLM")]
         public void MoveDiagonalIfYouAreOnDirectionNorthWestEastSouthAndRobotTurnLeftOrRightAndMove(string expectedPosition, string commands)
         {
-            var startNavigate = new Navigate(Compass.N, 1, 1);
-            var marsRover = new MarsRover(startNavigate);
-            var position = marsRover.Execute(commands);
+            var position = _marsRoverWithStartNavigate.Execute(commands);
             Assert.Equal(expectedPosition, (string) position);
         }
+
+        [Fact]
+        public void DonNotMoveIfTheCurrentPositionIsX0Y0NorthAndOnPositionX0Y1ThereIsAnObstacle()
+        {
+            var position = _marsRoverWithObstacleOnXOneYOne.Execute("M");   
+            Assert.Equal("0:0:N", position);
+        }   
     }
 }   
-                            
+                                
