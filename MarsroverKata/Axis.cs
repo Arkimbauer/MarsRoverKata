@@ -33,26 +33,26 @@ namespace MarsRoverDemo
 
         public void MoveNorthEast()
         {
-            _positionX++;
-            _positionY++;    
+            MoveNorth();
+            MoveEast();
         }
 
         public void MoveSouthEast()
         {
-            _positionX++;
-            _positionY--;
+           MoveEast();
+           MoveSouth();
         }
 
         public void MoveSouthWest()
         {
-            _positionX--;
-            _positionY--;
+            MoveWest();
+            MoveSouth();
         }
 
         public void MoveNorthWest()
         {
-            _positionX--;
-            _positionY++;
+            MoveWest();
+            MoveNorth();
         }
 
         public override string ToString()
@@ -60,9 +60,9 @@ namespace MarsRoverDemo
             return _positionX+":"+_positionY;
         }
 
-        public Axis CloneAxis()
+        public Axis GiveMeAnAxisClone()
         {   
-            var cloneAxis = new Axis(_positionX, _positionY);
+            var cloneAxis = new Axis(_positionX, _positionY);   
             return cloneAxis;
         }
 

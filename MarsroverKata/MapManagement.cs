@@ -19,7 +19,7 @@ namespace MarsRoverDemo
 
         public void NavigateTo(Direction direction, Axis axis)
         {
-            var cloneAxis = axis.CloneAxis();   
+            var cloneAxis = axis.GiveMeAnAxisClone();   
             
             _navigateToDictionary.NavigateTo(direction, cloneAxis);
 
