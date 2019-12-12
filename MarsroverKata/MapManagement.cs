@@ -1,28 +1,26 @@
-using System;
 using System.Collections.Generic;
-using MarsRoverDemo;
 
 namespace MarsRoverDemo
 {
     public class MapManagement
     {
         private readonly Axis _obstacle;
-        private readonly List<Axis> _gridPositions = new List<Axis>();
+        private List<Axis> _gridPositions;
         private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
+        private readonly MarsMap marsMap;
 
         public MapManagement(Axis obstacle = null)  
         {
             _obstacle = obstacle;
             const int width = 10;
             const int height = 10;
-            var marsMap = new MarsMap(width: width, height: height);
-            GenerateMapGridPositionsList(marsMap.Width, marsMap.Height);
-        }   
-
+            marsMap = new MarsMap(width: width, height: height);
+        }           
+            
         public void NavigateTo(Direction direction, Axis axis)
         {
-            var cloneAxis = axis.GiveMeAnAxisClone();   
-            
+            _gridPositions = marsMap.GiveMapGrid();
+            var cloneAxis = axis.GiveMeAnAxisClone();
             _navigateToDictionary.NavigateTo(direction, cloneAxis);
 
             if (_gridPositions.Contains(cloneAxis) && _obstacle != cloneAxis)
@@ -46,24 +44,6 @@ namespace MarsRoverDemo
             direction.TurnLeft();
             axis.MoveWest();
             direction.TurnRight();
-        }
-
-        private void GenerateMapGridPositionsList(int width, int height)
-        {
-            var count = 0;
-            for (var positionX = 0; positionX <= width; positionX++)
-            {
-                GeneratePositionYGrid(height, count);
-                count++;
-            }
-        }
-
-        private void GeneratePositionYGrid(int height, int count)
-        {
-            for (var positionY = 0; positionY <= height; positionY++)
-            {
-                _gridPositions.Add(new Axis(positionY, count));
-            }
         }
     }
 }   
