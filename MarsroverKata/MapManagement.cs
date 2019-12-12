@@ -4,14 +4,14 @@ using MarsRoverDemo;
 
 namespace MarsRoverDemo
 {
-    public class MarsMap
+    public class MapManagement
     {
         private readonly int _width;
         private readonly int _height;
         private readonly List<Axis> _gridPositions = new List<Axis>();
         private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
 
-        public MarsMap()
+        public MapManagement()
         {
             _width = 10;
             _height = 10;
