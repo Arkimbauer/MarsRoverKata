@@ -15,47 +15,7 @@ namespace MarsRoverDemo
 
         public void Move()
         {
-            //_marsMap.NavigateTo(_direction._compass, _axis);
-            
-            if (_direction == new Direction(Compass.N))
-            {
-                _mapManagement.NavigateTo(Compass.N, _axis);
-            }
-
-            if (_direction == new Direction(Compass.NE))
-            {
-                _mapManagement.NavigateTo(Compass.NE, _axis);
-            }
-
-            if (_direction == new Direction(Compass.E))
-            {
-                _mapManagement.NavigateTo(Compass.E, _axis);
-            }
-
-            if (_direction == new Direction(Compass.SE))
-            {
-                _mapManagement.NavigateTo(Compass.SE, _axis);
-            }
-                
-            if (_direction == new Direction(Compass.S))
-            {
-                _mapManagement.NavigateTo(Compass.S, _axis);
-            }
-
-            if (_direction == new Direction(Compass.SW))
-            {
-                _mapManagement.NavigateTo(Compass.SW, _axis);
-            }
-
-            if (_direction == new Direction(Compass.W))
-            {
-                _mapManagement.NavigateTo(Compass.W, _axis);
-            }
-
-            if (_direction == new Direction(Compass.NW))
-            {
-                _mapManagement.NavigateTo(Compass.NW, _axis);
-            }   
+            _mapManagement.NavigateTo(_direction.CurrentCompass(), _axis);
         }
 
         public void TurnRight() 

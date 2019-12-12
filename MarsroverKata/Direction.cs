@@ -2,11 +2,16 @@ namespace MarsRoverDemo
 {
     public class Direction
     {
-        public Compass _compass;
+        private Compass _compass;
 
         public Direction(Compass compass)
         {
             _compass = compass;
+        }
+        
+        public Compass CurrentCompass()
+        {   
+            return _compass;
         }
 
         public void TurnRight()
