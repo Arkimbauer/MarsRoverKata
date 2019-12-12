@@ -6,13 +6,9 @@ namespace MarsRoverDemo.Test
     {
         private readonly MarsRover _marsRover;
         private readonly MarsRover _marsRoverWithStartNavigate;
-        private readonly MarsRover _marsRoverWithObstacleOnXOneYOne;
 
         public MarsRoverShould( )
         {
-            var startNavigateWithObstacle = new Navigate(Compass.N, 0,0, new Axis(0, 1));
-            _marsRoverWithObstacleOnXOneYOne = new MarsRover(startNavigateWithObstacle);
-
             _marsRover = new MarsRover();
 
             var startNavigate = new Navigate(Compass.N, 1, 1);
@@ -105,13 +101,6 @@ namespace MarsRoverDemo.Test
         {
             var position = _marsRoverWithStartNavigate.Execute(commands);
             Assert.Equal(expectedPosition, (string) position);
-        }
-
-        [Fact]
-        public void IfTheNextMovementIsOnAnObstacleTurnRightMoveOneDirectionTurnLeftMoveTwoDirectionsTurnLeftMoveOneAndTurnRight()
-        {
-            var position = _marsRoverWithObstacleOnXOneYOne.Execute("M");
-            Assert.Equal("0:2:N", position);
         }
     }
 }   
