@@ -16,8 +16,8 @@ namespace MarsRoverDemo
             {Compass.W, (axisToChange)=> { axisToChange.MoveWest(); }},
             {Compass.NW, (axisToChange)=> { axisToChange.MoveNorthWest(); }},
         };
-
-        public NavigateToDictionary(Compass compass, Axis axis)
+        
+        public void NavigateTo(Compass compass, Axis axis)
         {
             _navigateTo[compass](axis);
         }

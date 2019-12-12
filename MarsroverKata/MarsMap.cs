@@ -9,6 +9,7 @@ namespace MarsRoverDemo
         private readonly int _width;
         private readonly int _height;
         private readonly List<Axis> _gridPositions = new List<Axis>();
+        private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
 
         public MarsMap()
         {
@@ -21,11 +22,11 @@ namespace MarsRoverDemo
         {
             var cloneAxis = axis.CloneAxis();
             
-            new NavigateToDictionary(compass, cloneAxis);
+            _navigateToDictionary.NavigateTo(compass, cloneAxis);
 
             if (_gridPositions.Contains(cloneAxis))
             {
-                new NavigateToDictionary(compass, axis);
+                _navigateToDictionary.NavigateTo(compass, axis);
             }
         }
 
