@@ -9,11 +9,9 @@ namespace MarsRoverDemo
         private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
         private readonly MarsMap _marsMap;
 
-        public MapManagement(Axis obstacle = null)  
+        public MapManagement(Axis obstacle = null, int width = 10, int height = 10)  
         {
             _obstacle = obstacle;
-            const int width = 10;
-            const int height = 10;  
             _marsMap = new MarsMap(width: width, height: height);
             _gridPositions = _marsMap.GiveMapGrid();
         }           
