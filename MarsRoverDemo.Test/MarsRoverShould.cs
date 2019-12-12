@@ -1,7 +1,6 @@
-using System.Collections.Generic;
 using Xunit;
 
-namespace MarsRoverDemo
+namespace MarsRoverDemo.Test
 {
     public class MarsRoverShould    
     {
@@ -16,7 +15,7 @@ namespace MarsRoverDemo
         public void StayInPlaceGivenNoCommand()
         {
             var result = _marsRover.Execute(string.Empty);
-            Assert.Equal("0:0:N", result);
+            Assert.Equal((string) "0:0:N", (string) result);
         }
 
         [Theory]
@@ -26,7 +25,7 @@ namespace MarsRoverDemo
         public void MoveAnyPositionsGivenCommandM(string expectedPosition, string command)
         {
             var position = _marsRover.Execute(command);
-            Assert.Equal(expectedPosition, position);
+            Assert.Equal(expectedPosition, (string) position);
         }
 
         [Theory]
@@ -37,7 +36,7 @@ namespace MarsRoverDemo
         public void TurnRightGivenCommandR(string expectedPosition, string command)
         {
             var position = _marsRover.Execute(command);
-            Assert.Equal(expectedPosition, position);
+            Assert.Equal(expectedPosition, (string) position);
         }
 
         [Theory]
@@ -48,14 +47,14 @@ namespace MarsRoverDemo
         public void TurnLeftGivenCommandL(string expectedPosition, string command)
         {
             var position = _marsRover.Execute(command);
-            Assert.Equal(expectedPosition, position);   
+            Assert.Equal(expectedPosition, (string) position);   
         }
 
         [Fact]
         public void TurnRightAndMoveOnePosition()
         {
             var position = _marsRover.Execute("RRM");
-            Assert.Equal("1:0:E", position);
+            Assert.Equal((string) "1:0:E", (string) position);
         }
 
         [Theory]
@@ -67,7 +66,7 @@ namespace MarsRoverDemo
             var startNavigate = new Navigate(Compass.N, 1, 1);
             var marsRover = new MarsRover(startNavigate);
             var position = marsRover.Execute(commands);
-            Assert.Equal(expectedPosition, position);
+            Assert.Equal(expectedPosition, (string) position);
         }
 
         [Theory]
@@ -83,7 +82,7 @@ namespace MarsRoverDemo
         public void DoNotMoveIfTheNextMoveYouWillBeOverTheField(string expectedPosition, string commands)
         {
             var position = _marsRover.Execute(commands);
-            Assert.Equal(expectedPosition, position);
+            Assert.Equal(expectedPosition, (string) position);
         }
 
         [Theory]
@@ -96,7 +95,7 @@ namespace MarsRoverDemo
             var startNavigate = new Navigate(Compass.N, 1, 1);
             var marsRover = new MarsRover(startNavigate);
             var position = marsRover.Execute(commands);
-            Assert.Equal(expectedPosition, position);
+            Assert.Equal(expectedPosition, (string) position);
         }
     }
 }   

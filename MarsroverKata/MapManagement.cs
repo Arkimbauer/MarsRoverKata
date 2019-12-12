@@ -9,15 +9,17 @@ namespace MarsRoverDemo
         private readonly List<Axis> _gridPositions = new List<Axis>();
         private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
 
-        public MapManagement()
+        public MapManagement()  
         {
-            var marsMap = new MarsMap(width: 10, height: 10);
+            const int width = 10;
+            const int height = 10;
+            var marsMap = new MarsMap(width: width, height: height);
             GenerateMapGridPositionsList(marsMap.Width, marsMap.Height);
         }
 
         public void NavigateTo(Compass compass, Axis axis)
         {
-            var cloneAxis = axis.CloneAxis();
+            var cloneAxis = axis.CloneAxis();   
             
             _navigateToDictionary.NavigateTo(compass, cloneAxis);
 
@@ -30,7 +32,7 @@ namespace MarsRoverDemo
         private void GenerateMapGridPositionsList(int width, int height)
         {
             var count = 0;
-            for (int positionX = 0; positionX <= width; positionX++)
+            for (var positionX = 0; positionX <= width; positionX++)
             {
                 GeneratePositionYGrid(height, count);
                 count++;
@@ -39,7 +41,7 @@ namespace MarsRoverDemo
 
         private void GeneratePositionYGrid(int height, int count)
         {
-            for (int positionY = 0; positionY <= height; positionY++)
+            for (var positionY = 0; positionY <= height; positionY++)
             {
                 _gridPositions.Add(new Axis(count, positionY));
             }
