@@ -43,7 +43,7 @@ namespace MarsRoverDemo
         {
             for (var positionY = 0; positionY <= height; positionY++)
             {
-                _gridPositions.Add(new Axis(count, positionY));
+                _gridPositions.Add(new Axis(positionY, count));
             }
         }
     }

@@ -5,7 +5,7 @@ namespace MarsRoverDemo
         private int _positionY;
         private int _positionX;
 
-        public Axis(int positionY, int positionX)
+        public Axis(int positionX, int positionY)
         {
             _positionY = positionY;
             _positionX = positionX;
@@ -62,7 +62,7 @@ namespace MarsRoverDemo
 
         public Axis CloneAxis()
         {   
-            var cloneAxis = new Axis(_positionY, _positionX);
+            var cloneAxis = new Axis(_positionX, _positionY);
             return cloneAxis;
         }
 

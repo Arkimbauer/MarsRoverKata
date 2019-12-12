@@ -8,7 +8,7 @@ namespace MarsRoverDemo
 
         public Navigate(Compass direction, int positionY, int positionX)
         {
-            _axis = new Axis(positionY, positionX);
+            _axis = new Axis(positionX, positionY);
             _direction = new Direction(direction);
             _mapManagement = new MapManagement();
         }    
