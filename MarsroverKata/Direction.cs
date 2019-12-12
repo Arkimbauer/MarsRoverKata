@@ -8,11 +8,6 @@ namespace MarsRoverDemo
         {
             _compass = compass;
         }
-        
-        public Compass CurrentCompass()
-        {   
-            return _compass;
-        }
 
         public void TurnRight()
         {

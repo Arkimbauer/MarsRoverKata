@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace MarsRoverDemo
 {
     public class Navigate
@@ -15,7 +17,7 @@ namespace MarsRoverDemo
 
         public void Move()
         {
-            _mapManagement.NavigateTo(_direction.CurrentCompass(), _axis);
+            _mapManagement.NavigateTo(_direction, _axis);
         }
 
         public void TurnRight() 

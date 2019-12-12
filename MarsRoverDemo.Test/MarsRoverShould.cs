@@ -53,14 +53,19 @@ namespace MarsRoverDemo.Test
         [Fact]
         public void TurnRightAndMoveOnePosition()
         {
-            var position = _marsRover.Execute("RRM");
-            Assert.Equal((string) "1:0:E", (string) position);
+            var position = _marsRover.Execute("RM");
+            Assert.Equal((string) "1:1:NE", (string) position);
         }
 
         [Theory]
+        [InlineData("1:2:N", "M")]
+        [InlineData("2:2:NE", "RM")]
         [InlineData("2:1:E", "RRM")]
-        [InlineData("0:1:W", "LLM")]
+        [InlineData("2:0:SE", "RRRM")]
         [InlineData("1:0:S", "RRRRM")]
+        [InlineData("0:2:NW", "LM")]
+        [InlineData("0:1:W", "LLM")]
+        [InlineData("0:0:SW", "LLLM")]
         public void MoveOnePositionForEachCompassDirection(string expectedPosition, string commands)
         {
             var startNavigate = new Navigate(Compass.N, 1, 1);

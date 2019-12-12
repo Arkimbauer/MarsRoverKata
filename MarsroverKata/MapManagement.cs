@@ -17,15 +17,15 @@ namespace MarsRoverDemo
             GenerateMapGridPositionsList(marsMap.Width, marsMap.Height);
         }
 
-        public void NavigateTo(Compass compass, Axis axis)
+        public void NavigateTo(Direction direction, Axis axis)
         {
             var cloneAxis = axis.CloneAxis();   
             
-            _navigateToDictionary.NavigateTo(compass, cloneAxis);
+            _navigateToDictionary.NavigateTo(direction, cloneAxis);
 
             if (_gridPositions.Contains(cloneAxis))
             {
-                _navigateToDictionary.NavigateTo(compass, axis);
+                _navigateToDictionary.NavigateTo(direction, axis);
             }
         }
 
