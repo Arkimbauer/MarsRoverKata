@@ -94,11 +94,10 @@ namespace MarsRoverDemo
         public void MoveDiagonalIfYouAreOnDirectionNorthWestEastSouthAndRobotTurnLeftOrRightAndMove(string expectedPosition, string commands)
         {
             var startNavigate = new Navigate(Compass.N, 1, 1);
-            var marsRover = new MarsRover(startNavigate);   
+            var marsRover = new MarsRover(startNavigate);
             var position = marsRover.Execute(commands);
             Assert.Equal(expectedPosition, position);
         }
-
     }
 }   
                             

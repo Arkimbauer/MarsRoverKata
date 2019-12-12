@@ -16,6 +16,7 @@
         <e p="Compass.cs" t="Include" />
         <e p="Direction.cs" t="Include" />
         <e p="MapManagement.cs" t="Include" />
+        <e p="MarsMap.cs" t="Include" />
         <e p="MarsRover.cs" t="Include" />
         <e p="MarsRoverDemo.csproj" t="IncludeRecursive" />
         <e p="MarsRoverShould.cs" t="Include" />

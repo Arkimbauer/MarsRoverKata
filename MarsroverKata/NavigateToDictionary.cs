@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MarsRoverDemo
 {
-    internal class NavigateToDictionary
+    public class NavigateToDictionary
     {
         private readonly Dictionary<Compass, Action<Axis>> _navigateTo = new Dictionary<Compass, Action<Axis>>
         {
