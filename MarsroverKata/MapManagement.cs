@@ -7,19 +7,19 @@ namespace MarsRoverDemo
         private readonly Axis _obstacle;
         private List<Axis> _gridPositions;
         private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
-        private readonly MarsMap marsMap;
+        private readonly MarsMap _marsMap;
 
         public MapManagement(Axis obstacle = null)  
         {
             _obstacle = obstacle;
             const int width = 10;
-            const int height = 10;
-            marsMap = new MarsMap(width: width, height: height);
+            const int height = 10;  
+            _marsMap = new MarsMap(width: width, height: height);
+            _gridPositions = _marsMap.GiveMapGrid();
         }           
             
         public void NavigateTo(Direction direction, Axis axis)
         {
-            _gridPositions = marsMap.GiveMapGrid();
             var cloneAxis = axis.GiveMeAnAxisClone();
             _navigateToDictionary.NavigateTo(direction, cloneAxis);
 
