@@ -108,11 +108,11 @@ namespace MarsRoverDemo.Test
         }
 
         [Fact]
-        public void DonNotMoveIfTheCurrentPositionIsX0Y0NorthAndOnPositionX0Y1ThereIsAnObstacle()
+        public void IfTheNextMovementIsOnAnObstacleTurnRightMoveOneDirectionTurnLeftMoveTwoDirectionsTurnLeftMoveOneAndTurnRight()
         {
-            var position = _marsRoverWithObstacleOnXOneYOne.Execute("M");   
-            Assert.Equal("0:0:N", position);
-        }   
+            var position = _marsRoverWithObstacleOnXOneYOne.Execute("M");
+            Assert.Equal("0:2:N", position);
+        }
     }
 }   
                                 
