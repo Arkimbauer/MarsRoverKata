@@ -29,9 +29,9 @@ namespace MarsRoverDemo
             }
         }
 
-        public List<Axis> GiveMapGrid()
+        public bool CheckIfAxisIsOnGridMap(Axis axis)
         {
-            return _gridPositions;
+            return _gridPositions.Contains(axis);
         }
     }
 }

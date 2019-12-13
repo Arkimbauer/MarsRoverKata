@@ -19,7 +19,7 @@ namespace MarsRoverDemo
             var cloneAxis = axis.GiveMeAnAxisClone();
             _navigateToDictionary.NavigateTo(direction, cloneAxis);
 
-            if (_marsMap.GiveMapGrid().Contains(cloneAxis) && _obstacle != cloneAxis)
+            if (_marsMap.CheckIfAxisIsOnGridMap(cloneAxis) && _obstacle != cloneAxis)
             {
                 _navigateToDictionary.NavigateTo(direction, axis);
             }
