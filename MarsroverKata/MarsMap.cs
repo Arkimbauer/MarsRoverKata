@@ -4,23 +4,19 @@ namespace MarsRoverDemo
 {
     public class MarsMap
     {
-        private readonly int _width;
-        private readonly int _height;
         private readonly List<Axis> _gridPositions = new List<Axis>();
 
         public MarsMap(int width, int height)
         {
-            _width = width;
-            _height = height;
-            GenerateMapGridPositionsList();
+            GenerateMapGridPositionsList(width, height);
         }
 
-        private void GenerateMapGridPositionsList()
+        private void GenerateMapGridPositionsList(int width, int height)
         {
             var positionXCount = 0;
-            for (var positionX = 0; positionX <= _width; positionX++)
+            for (var positionX = 0; positionX <= width; positionX++)
             {
-                GeneratePositionYGrid(_height, positionXCount);
+                GeneratePositionYGrid(height, positionXCount);
                 positionXCount++;
             }
         }

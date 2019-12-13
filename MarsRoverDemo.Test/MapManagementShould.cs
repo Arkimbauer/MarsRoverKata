@@ -6,7 +6,7 @@ namespace MarsRoverDemo.Test
     {
         private readonly MarsRover _marsRoverWithObstacleOnXOneYOne;
 
-        public MapManagementShould( )
+        public MapManagementShould()
         {
             var startNavigateWithObstacle = new Navigate(Compass.N, 0, 0, new Axis(0, 1));
             _marsRoverWithObstacleOnXOneYOne = new MarsRover(startNavigateWithObstacle);
