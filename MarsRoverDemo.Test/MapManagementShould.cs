@@ -13,10 +13,10 @@ namespace MarsRoverDemo.Test
         }
 
         [Fact]
-        public void IfTheNextMovementIsOnAnObstacleTurnRightMoveOneDirectionTurnLeftMoveTwoDirectionsTurnLeftMoveOneAndTurnRight()
+        public void IfTheNextMovementIsOnAnObstacleDonNotMove()
         {
             var position = _marsRoverWithObstacleOnXOneYOne.Execute("M");
-            Assert.Equal("0:2:N", position);
+            Assert.Equal("0:0:N", position);
         }
     }
 }   

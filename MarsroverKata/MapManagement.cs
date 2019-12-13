@@ -24,23 +24,6 @@ namespace MarsRoverDemo
             {
                 _navigateToDictionary.NavigateTo(direction, axis);
             }
-
-            if (_gridPositions.Contains(cloneAxis) && _obstacle == cloneAxis)
-            {
-                GetAroundTheObstacle(direction, axis);
-            }
-        }
-
-        private static void GetAroundTheObstacle(Direction direction, Axis axis)
-        {
-            direction.TurnRight();
-            axis.MoveEast();
-            direction.TurnLeft();
-            axis.MoveNorth();
-            axis.MoveNorth();
-            direction.TurnLeft();
-            axis.MoveWest();
-            direction.TurnRight();
         }
     }
 }   
