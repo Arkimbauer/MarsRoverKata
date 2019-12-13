@@ -17,11 +17,11 @@ namespace MarsRoverDemo
 
         private void GenerateMapGridPositionsList()
         {
-            var count = 0;
+            var positionXCount = 0;
             for (var positionX = 0; positionX <= _width; positionX++)
             {
-                GeneratePositionYGrid(_height, count);
-                count++;
+                GeneratePositionYGrid(_height, positionXCount);
+                positionXCount++;
             }
         }
 
