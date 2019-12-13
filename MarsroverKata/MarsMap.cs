@@ -3,24 +3,24 @@ using System.Collections.Generic;
 namespace MarsRoverDemo
 {
     public class MarsMap
-    {   
-        public readonly int Width;
-        public readonly int Height;
+    {
+        private readonly int _width;
+        private readonly int _height;
         private readonly List<Axis> _gridPositions = new List<Axis>();
 
         public MarsMap(int width, int height)
         {
-            Width = width;
-            Height = height;
+            _width = width;
+            _height = height;
             GenerateMapGridPositionsList();
         }
 
         private void GenerateMapGridPositionsList()
         {
             var count = 0;
-            for (var positionX = 0; positionX <= Width; positionX++)
+            for (var positionX = 0; positionX <= _width; positionX++)
             {
-                GeneratePositionYGrid(Height, count);
+                GeneratePositionYGrid(_height, count);
                 count++;
             }
         }

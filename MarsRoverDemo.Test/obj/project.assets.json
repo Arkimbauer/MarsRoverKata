@@ -1639,7 +1639,6 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.0.1",
-          "Microsoft.NETCore.App": "2.1.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
@@ -5816,7 +5815,7 @@
     "MarsRoverDemo/1.0.0": {
       "type": "project",
       "path": "../MarsRoverKata/MarsRoverDemo.csproj",
-      "msbuildProject": "../MarsRoverKata/MarsRoverDemo.csproj"
+      "msbuildProject": "../MarsroverKata/MarsRoverDemo.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5831,37 +5830,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\malar\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/adriaarki/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malar\\Desktop\\MarsRoverKata\\MarsRoverDemo.Test\\MarsRoverDemo.Test.csproj",
+      "projectUniqueName": "/Users/adriaarki/Katas/MarsRoverKata/MarsRoverDemo.Test/MarsRoverDemo.Test.csproj",
       "projectName": "MarsRoverDemo.Test",
-      "projectPath": "C:\\Users\\malar\\Desktop\\MarsRoverKata\\MarsRoverDemo.Test\\MarsRoverDemo.Test.csproj",
-      "packagesPath": "C:\\Users\\malar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malar\\Desktop\\MarsRoverKata\\MarsRoverDemo.Test\\obj\\",
+      "projectPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsRoverDemo.Test/MarsRoverDemo.Test.csproj",
+      "packagesPath": "/Users/adriaarki/.nuget/packages/",
+      "outputPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsRoverDemo.Test/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\malar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/adriaarki/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\malar\\Desktop\\MarsRoverKata\\MarsRoverKata\\MarsRoverDemo.csproj": {
-              "projectPath": "C:\\Users\\malar\\Desktop\\MarsRoverKata\\MarsRoverKata\\MarsRoverDemo.csproj"
+            "/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/MarsRoverDemo.csproj": {
+              "projectPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/MarsRoverDemo.csproj"
             }
           }
         }
@@ -5880,6 +5873,7 @@
             "version": "[16.2.0, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -5902,7 +5896,12 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true

@@ -7,13 +7,13 @@
     "outputPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsRoverDemo.Test/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
-      "netcoreapp3.0"
+      "netcoreapp2.1"
     ],
     "sources": {
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
-      "netcoreapp3.0": {
+      "netcoreapp2.1": {
         "projectReferences": {
           "/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/MarsRoverDemo.csproj": {
             "projectPath": "/Users/adriaarki/Katas/MarsRoverKata/MarsroverKata/MarsRoverDemo.csproj"
@@ -28,17 +28,27 @@
     }
   },
   "frameworks": {
-    "netcoreapp3.0": {
+    "netcoreapp2.1": {
       "dependencies": {
         "Microsoft.NET.Test.Sdk": {
           "target": "Package",
           "version": "[16.2.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
         },
         "coverlet.collector": {
           "target": "Package",
           "version": "[1.0.1, )"
         },
         "xunit": {
+          "target": "Package",
+          "version": "[2.4.0, )"
+        },
+        "xunit.assert": {
           "target": "Package",
           "version": "[2.4.0, )"
         },

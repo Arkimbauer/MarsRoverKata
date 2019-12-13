@@ -13,11 +13,12 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="MarsRoverDemo.Test" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="MapManagementShould.cs" t="Include" />
         <e p="MarsRoverDemo.Test.csproj" t="IncludeRecursive" />
         <e p="MarsRoverShould.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.0" t="Include">
+            <e p="netcoreapp2.1" t="Include">
               <e p="MarsRoverDemo.Test.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
