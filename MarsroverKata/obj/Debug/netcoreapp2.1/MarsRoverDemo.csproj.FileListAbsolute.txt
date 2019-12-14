@@ -25,3 +25,16 @@ C:\Users\malar\Desktop\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsR
 C:\Users\malar\Desktop\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.AssemblyInfo.cs
 C:\Users\malar\Desktop\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.dll
 C:\Users\malar\Desktop\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.pdb
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\MarsRoverDemo.deps.json
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\MarsRoverDemo.runtimeconfig.json
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\MarsRoverDemo.runtimeconfig.dev.json
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\MarsRoverDemo.dll
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\bin\Debug\netcoreapp2.1\MarsRoverDemo.pdb
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.csproj.CoreCompileInputs.cache
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.AssemblyInfoInputs.cache
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.AssemblyInfo.cs
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.dll
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.pdb
