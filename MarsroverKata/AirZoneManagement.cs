@@ -9,7 +9,7 @@ namespace MarsRoverDemo
         private readonly ObstaclesList _obstaclesListList;
         private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
         private double _fuelToReturnHome;
-        private List<Direction> _wayBack = new List<Direction>();
+        private readonly List<Direction> _wayBack = new List<Direction>();
 
         public AirZoneManagement(double fuel, ObstaclesList obstaclesListList)
         {
@@ -26,18 +26,24 @@ namespace MarsRoverDemo
                 return;
             }
 
-            if (_fuel > _fuelToReturnHome)
-            {
-                _navigateToDictionary.NavigateTo(direction, axis);
-                _fuel --;
-                _wayBack.Add(direction);
-            }
+            var cloneAxis = axis.GiveMeAnAxisClone();
+            _navigateToDictionary.NavigateTo(direction, cloneAxis);
 
-            if (_fuel <= _fuelToReturnHome)
+            if (CheckIfIsNotOnObstacleList(cloneAxis))
             {
-                Turn180(direction);
-                GoHome(axis);
-                Turn180(direction);
+                if (_fuel > _fuelToReturnHome)
+                {
+                    _navigateToDictionary.NavigateTo(direction, axis);
+                    _fuel--;
+                    _wayBack.Add(direction);
+                }
+
+                if (_fuel <= _fuelToReturnHome)
+                {
+                    Turn180(direction);
+                    GoHome(axis);
+                    Turn180(direction);
+                }
             }
         }
 
@@ -48,6 +54,11 @@ namespace MarsRoverDemo
                 _navigateToDictionary.NavigateTo(direction, axis);
                 _fuel--;
             }
+        }
+
+        private bool CheckIfIsNotOnObstacleList(Axis cloneAxis)
+        {
+            return _obstaclesListList == null || _obstaclesListList.CheckIfIsNotOnObstacleList(cloneAxis);
         }
 
         private void CalculateFuelToReturnHome()

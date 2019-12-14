@@ -10,7 +10,9 @@ namespace MarsRoverDemo.Test
         public FlightModeNavigateShould()
         {
             const double fuel = 8.0;
-            _marsRover = new MarsRover(new FLightModeNavigate(fuel));
+            var obstaclesList = new List<Axis> { new Axis(0, 1), new Axis(5, 0) };
+            var obstacle = new ObstaclesList(obstaclesList);
+            _marsRover = new MarsRover(new FLightModeNavigate(fuel, Compass.N, 0, 0,obstacle));
         }
 
         [Fact]
@@ -24,6 +26,13 @@ namespace MarsRoverDemo.Test
         public void IsFuelIsEightDonNotMoveMoreThanFourPositionsAndInitializeGoHomeProcedure()
         {
             var position = _marsRover.Execute("MMMMMMMM");
+            Assert.Equal("0:0:N", position);
+        }
+
+        [Fact]
+        public void IfTheNextMovementIsOnAnObstacleDonNotMove()
+        {
+            var position =_marsRover.Execute("M");
             Assert.Equal("0:0:N", position);
         }
     }
