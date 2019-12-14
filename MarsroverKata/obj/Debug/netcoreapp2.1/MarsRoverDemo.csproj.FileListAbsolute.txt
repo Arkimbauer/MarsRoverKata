@@ -38,3 +38,4 @@ C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcore
 C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.AssemblyInfo.cs
 C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.dll
 C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.pdb
+C:\Users\malar\Documents\Proyectos\MarsRoverKata\MarsRoverKata\obj\Debug\netcoreapp2.1\MarsRoverDemo.csprojAssemblyReference.cache

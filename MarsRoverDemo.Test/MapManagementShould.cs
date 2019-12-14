@@ -9,7 +9,7 @@ namespace MarsRoverDemo.Test
 
         public MapManagementShould()
         {
-            var obstaclesList = new List<Axis>{new Axis(0,1)};
+            var obstaclesList = new List<Axis>{new Axis(0,1), new Axis(5, 0) };
             var obstacle = new ObstaclesList(obstaclesList);
             var startNavigateWithObstacle = new Navigate(Compass.N, 0, 0, obstacle);
             _marsRoverWithObstacleOnXZeroYOne = new MarsRover(startNavigateWithObstacle);
@@ -32,12 +32,8 @@ namespace MarsRoverDemo.Test
         [Fact]
         public void DonNotMoveIfOnNextNorthYPositionThereIsAnObstacleAndTurnRightThenDonNotMoveAgainIfOnTheEastPositionThereIsAnotherObstacle()
         {
-            var obstaclesList = new List<Axis> {new Axis(0, 1), new Axis(1,0)};
-            var obstacles = new ObstaclesList(obstaclesList);
-            var startNavigateWithTwoObstacles = new Navigate(Compass.N, 0,0, obstacles);
-            var marsRover = new MarsRover(startNavigateWithTwoObstacles);
-            var position = marsRover.Execute("MRRM");
-            Assert.Equal("0:0:E", position);
+            var position = _marsRoverWithObstacleOnXZeroYOne.Execute("MRRMMMMMMM");
+            Assert.Equal("4:0:E", position);
         }
     }
 }       
