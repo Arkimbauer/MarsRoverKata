@@ -4,13 +4,13 @@ namespace MarsRoverDemo
 {
     public class MapManagement
     {
-        private readonly Obstacles _obstaclesList;
+        private readonly ObstaclesList _obstaclesListList;
         private readonly MarsMap _marsMap;
         private readonly NavigateToDictionary _navigateToDictionary = new NavigateToDictionary();
 
-        public MapManagement(Obstacles obstaclesList, int width = 10, int height = 10)
+        public MapManagement(ObstaclesList obstaclesListList, int width = 10, int height = 10)
         {
-            _obstaclesList = obstaclesList;
+            _obstaclesListList = obstaclesListList;
 
             _marsMap = new MarsMap(width: width, height: height);
         }           
@@ -28,7 +28,7 @@ namespace MarsRoverDemo
 
         private bool CheckIfIsNotOnObstacleList(Axis cloneAxis)
         {
-            return _obstaclesList == null || _obstaclesList.CheckIfIsNotOnObstacleList(cloneAxis);
+            return _obstaclesListList == null || _obstaclesListList.CheckIfIsNotOnObstacleList(cloneAxis);
         }
     }
 }   

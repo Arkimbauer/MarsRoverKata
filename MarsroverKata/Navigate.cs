@@ -8,11 +8,11 @@ namespace MarsRoverDemo
         private readonly Axis _axis;
         private readonly MapManagement _mapManagement;
 
-        public Navigate(Compass direction, int positionY, int positionX, Obstacles obstaclesList = null)
+        public Navigate(Compass direction, int positionY, int positionX, ObstaclesList obstaclesListList = null)
         {
             _axis = new Axis(positionX, positionY);
             _direction = new Direction(direction);
-            _mapManagement = new MapManagement(obstaclesList);
+            _mapManagement = new MapManagement(obstaclesListList);
         }    
 
         public void Move()

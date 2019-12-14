@@ -2,11 +2,11 @@ using System.Collections.Generic;
 
 namespace MarsRoverDemo
 {
-    public class Obstacles
+    public class ObstaclesList
     {
-        private readonly List<Axis> _obstaclesList = new List<Axis>();
+        private readonly List<Axis> _obstaclesList;
 
-        public Obstacles(List<Axis> obstaclesList)
+        public ObstaclesList(List<Axis> obstaclesList)
         {
             _obstaclesList = obstaclesList;
         }
@@ -16,4 +16,4 @@ namespace MarsRoverDemo
             return !_obstaclesList.Contains(cloneAxis);
         }
     }
-}
+}   
