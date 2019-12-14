@@ -6,6 +6,7 @@ namespace MarsRoverDemo.Test
     public class MapManagementShould
     {
         private readonly MarsRover _marsRoverWithObstacleOnXZeroYOne;
+        private readonly BoostedNavigateShould _boostedNavigateShould;
 
         public MapManagementShould()
         {
@@ -13,6 +14,7 @@ namespace MarsRoverDemo.Test
             var obstacle = new ObstaclesList(obstaclesList, ObstacleType.Land);
             var startNavigateWithObstacle = new Navigate(Compass.N, 0, 0, obstacle);
             _marsRoverWithObstacleOnXZeroYOne = new MarsRover(startNavigateWithObstacle);
+            _boostedNavigateShould = new BoostedNavigateShould();
         }
 
         [Fact]
