@@ -11,7 +11,6 @@ namespace MarsRoverDemo
         public MapManagement(ObstaclesList obstaclesListList, int width = 10, int height = 10)
         {
             _obstaclesListList = obstaclesListList;
-
             _marsMap = new MarsMap(width: width, height: height);
         }           
             

@@ -31,6 +31,14 @@ namespace MarsRoverDemo
             _compass--;
         }
 
+        public void Turn180()
+        {
+            TurnRight();
+            TurnRight();
+            TurnRight();
+            TurnRight();
+        }
+
         public override string ToString()
         {
             return _compass.ToString();

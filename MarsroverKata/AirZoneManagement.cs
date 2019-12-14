@@ -38,9 +38,9 @@ namespace MarsRoverDemo
 
             if (_fuel <= _fuelToReturnHome)
             {
-                Turn180(direction);
+                direction.Turn180();
                 GoHome(axis);
-                Turn180(direction);
+                direction.Turn180();
             }
         }
 
@@ -66,14 +66,6 @@ namespace MarsRoverDemo
         private void CalculateFuelToReturnHome()
         {
             _fuelToReturnHome = _fuel / 2 + _fuel % 2;
-        }
-
-        private static void Turn180(Direction direction)
-        {
-            direction.TurnRight();
-            direction.TurnRight();
-            direction.TurnRight();
-            direction.TurnRight();
         }
     }
 }
