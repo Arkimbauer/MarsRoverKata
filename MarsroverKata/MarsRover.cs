@@ -6,9 +6,9 @@ namespace MarsRoverDemo
 {
     public class MarsRover
     {
-        private readonly Navigate _navigate;
+        private readonly INavigate _navigate;
             
-        public MarsRover(Navigate initialNavigate = null)
+        public MarsRover(INavigate initialNavigate = null)
         {
             _navigate = initialNavigate ?? new Navigate(Compass.N, positionX:0, positionY:0);
         }

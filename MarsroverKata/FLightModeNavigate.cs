@@ -1,23 +1,21 @@
-using System.Collections.Generic;
-
 namespace MarsRoverDemo
 {
-    public class Navigate : INavigate
+    public class FLightModeNavigate : INavigate
     {
         private readonly Direction _direction;
         private readonly Axis _axis;
-        private readonly MapManagement _mapManagement;
+        private readonly AirZoneManagement _airZoneManagement;
 
-        public Navigate(Compass direction, int positionY, int positionX, ObstaclesList obstaclesListList = null)
+        public FLightModeNavigate(Compass direction = 0, int positionY = 0, int positionX = 0, ObstaclesList obstaclesListList = null)
         {
             _axis = new Axis(positionX, positionY);
             _direction = new Direction(direction);
-            _mapManagement = new MapManagement(obstaclesListList);
-        }    
+            _airZoneManagement = new AirZoneManagement(obstaclesListList);
+        }
 
         public void Move()
         {
-            _mapManagement.NavigateTo(_direction, _axis);
+            _airZoneManagement.NavigateTo(_direction, _axis);
         }
 
         public void TurnRight() 
@@ -25,7 +23,7 @@ namespace MarsRoverDemo
             _direction.TurnRight();
         }
 
-        public void TurnLeft()
+        public void TurnLeft()  
         {
             _direction.TurnLeft();
         }
@@ -35,4 +33,4 @@ namespace MarsRoverDemo
             return $"{_axis}:{_direction}";
         }
     }
-}       
+}
