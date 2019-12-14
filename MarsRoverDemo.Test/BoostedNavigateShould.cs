@@ -15,9 +15,17 @@ namespace MarsRoverDemo.Test
         [Fact]
         public void MoveTwoPositionsGivenOneMCommand()
         {
-          
             var position = _marsRover.Execute("M");
             Assert.Equal("0:2:N", position);
+        }
+
+        [Fact]
+        public void IfRobotAreOnePositionToLimitFieldMoveOnlyOneMovement()
+        {
+            var boostedNavigate = new BoostedNavigate(Compass.S, 1,0);
+            var marsRover = new MarsRover(boostedNavigate);
+            var position = marsRover.Execute("M");
+            Assert.Equal("0:0:S", position);
         }
     }
 }
