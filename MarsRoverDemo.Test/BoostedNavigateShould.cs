@@ -22,10 +22,10 @@ namespace MarsRoverDemo.Test
         [Fact]
         public void IfRobotAreOnePositionToLimitFieldMoveOnlyOneMovement()
         {
-            var boostedNavigate = new BoostedNavigate(Compass.S, 1,0);
+            var boostedNavigate = new BoostedNavigate(Compass.S, 0,1);
             var marsRover = new MarsRover(boostedNavigate);
             var position = marsRover.Execute("M");
             Assert.Equal("0:0:S", position);
         }
     }
-}
+}   
