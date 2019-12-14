@@ -29,21 +29,18 @@ namespace MarsRoverDemo
             var cloneAxis = axis.GiveMeAnAxisClone();
             _navigateToDictionary.NavigateTo(direction, cloneAxis);
 
-            if (CheckIfIsNotOnObstacleList(cloneAxis))
+            if (_fuel > _fuelToReturnHome && CheckIfIsNotOnAerialObstacleList(cloneAxis))
             {
-                if (_fuel > _fuelToReturnHome)
-                {
-                    _navigateToDictionary.NavigateTo(direction, axis);
-                    _fuel--;
-                    _wayBack.Add(direction);
-                }
+                _navigateToDictionary.NavigateTo(direction, axis);
+                _fuel--;
+                _wayBack.Add(direction);
+            }
 
-                if (_fuel <= _fuelToReturnHome)
-                {
-                    Turn180(direction);
-                    GoHome(axis);
-                    Turn180(direction);
-                }
+            if (_fuel <= _fuelToReturnHome)
+            {
+                Turn180(direction);
+                GoHome(axis);
+                Turn180(direction);
             }
         }
 
@@ -56,9 +53,14 @@ namespace MarsRoverDemo
             }
         }
 
-        private bool CheckIfIsNotOnObstacleList(Axis cloneAxis)
+        private bool CheckIfIsNotOnAerialObstacleList(Axis cloneAxis)
         {
-            return _obstaclesListList == null || _obstaclesListList.CheckIfIsNotOnObstacleList(cloneAxis);
+            if (_obstaclesListList == null || _obstaclesListList.CheckIfIsNotOnObstacleList(cloneAxis) && _obstaclesListList.CheckTypeObstacle(ObstacleType.Aerial))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void CalculateFuelToReturnHome()

@@ -11,7 +11,7 @@ namespace MarsRoverDemo.Test
         {
             const double fuel = 8.0;
             var obstaclesList = new List<Axis> { new Axis(0, 1), new Axis(5, 0) };
-            var obstacle = new ObstaclesList(obstaclesList);
+            var obstacle = new ObstaclesList(obstaclesList, ObstacleType.Aerial);
             _marsRover = new MarsRover(new FLightModeNavigate(fuel, Compass.N, 0, 0,obstacle));
         }
 
@@ -30,10 +30,11 @@ namespace MarsRoverDemo.Test
         }
 
         [Fact]
-        public void IfTheNextMovementIsOnAnObstacleDonNotMove()
+        public void IfTheNextMovementIsOnAnObstacleAndTheObstacleIsAnAerialObstacleDonNotMove()
         {
             var position =_marsRover.Execute("M");
             Assert.Equal("0:0:N", position);
-        }
+        }   
+
     }
 }               

@@ -28,7 +28,7 @@ namespace MarsRoverDemo
 
         private bool CheckIfIsNotOnObstacleList(Axis cloneAxis)
         {
-            return _obstaclesListList == null || _obstaclesListList.CheckIfIsNotOnObstacleList(cloneAxis);
+            return _obstaclesListList == null || _obstaclesListList.CheckIfIsNotOnObstacleList(cloneAxis) && _obstaclesListList.CheckTypeObstacle(ObstacleType.Land);
         }
     }
 }   

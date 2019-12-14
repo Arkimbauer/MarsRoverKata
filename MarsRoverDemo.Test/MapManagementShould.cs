@@ -10,7 +10,7 @@ namespace MarsRoverDemo.Test
         public MapManagementShould()
         {
             var obstaclesList = new List<Axis>{new Axis(0,1), new Axis(5, 0) };
-            var obstacle = new ObstaclesList(obstaclesList);
+            var obstacle = new ObstaclesList(obstaclesList, ObstacleType.Land);
             var startNavigateWithObstacle = new Navigate(Compass.N, 0, 0, obstacle);
             _marsRoverWithObstacleOnXZeroYOne = new MarsRover(startNavigateWithObstacle);
         }
