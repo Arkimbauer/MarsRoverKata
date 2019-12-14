@@ -6,11 +6,11 @@ namespace MarsRoverDemo
         private readonly Axis _axis;
         private readonly AirZoneManagement _airZoneManagement;
 
-        public FLightModeNavigate(Compass direction = 0, int positionY = 0, int positionX = 0, ObstaclesList obstaclesListList = null)
+        public FLightModeNavigate(double fuel, Compass direction = 0, int positionY = 0, int positionX = 0, ObstaclesList obstaclesListList = null)
         {
             _axis = new Axis(positionX, positionY);
             _direction = new Direction(direction);
-            _airZoneManagement = new AirZoneManagement(obstaclesListList);
+            _airZoneManagement = new AirZoneManagement(fuel, obstaclesListList);
         }
 
         public void Move()

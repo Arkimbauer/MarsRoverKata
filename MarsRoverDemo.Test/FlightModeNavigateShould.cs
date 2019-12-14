@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Xunit;
 
 namespace MarsRoverDemo.Test
@@ -8,14 +9,22 @@ namespace MarsRoverDemo.Test
 
         public FlightModeNavigateShould()
         {
-            _marsRover = new MarsRover(new FLightModeNavigate());
+            const double fuel = 8.0;
+            _marsRover = new MarsRover(new FLightModeNavigate(fuel));
         }
 
         [Fact]
-        public void TurnRightAndMoveFivePositionsBeyondTheLimits()
+        public void TurnRightAndMoveOnePositionBeyondTheLimits()
         {
-            var position = _marsRover.Execute("LLMMMMM");
-            Assert.Equal("-5:0:W", position);
+            var position = _marsRover.Execute("LLM");
+            Assert.Equal("-1:0:W", position);   
+        }
+
+        [Fact]
+        public void IsFuelIsEightDonNotMoveMoreThanFourPositionsAndInitializeGoHomeProcedure()
+        {
+            var position = _marsRover.Execute("MMMMMMMM");
+            Assert.Equal("0:0:N", position);
         }
     }
-}
+}               
