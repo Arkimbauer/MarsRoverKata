@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\malar\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\malar\\.nuget\\packages",
+      "C:\\Users\\Voxel\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Voxel\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
