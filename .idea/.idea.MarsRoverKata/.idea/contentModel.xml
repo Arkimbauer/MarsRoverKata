@@ -33,8 +33,11 @@
         <e p="BoostedNavigate.cs" t="Include" />
         <e p="CommandFactory.cs" t="Include" />
         <e p="Commands.cs" t="Include" />
-        <e p="Compass.cs" t="Include" />
         <e p="Direction.cs" t="Include" />
+        <e p="Enums" t="Include">
+          <e p="Compass.cs" t="Include" />
+          <e p="ObstacleType.cs" t="Include" />
+        </e>
         <e p="FLightModeNavigate.cs" t="Include" />
         <e p="INavigate.cs" t="Include" />
         <e p="MapManagement.cs" t="Include" />
@@ -51,7 +54,6 @@
           </e>
         </e>
         <e p="ObstaclesList.cs" t="Include" />
-        <e p="ObstacleType.cs" t="Include" />
       </e>
       <e p="MarsRoverKata.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

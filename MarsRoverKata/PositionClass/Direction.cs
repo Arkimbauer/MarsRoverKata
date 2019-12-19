@@ -1,4 +1,6 @@
-namespace MarsRoverDemo
+using MarsRoverDemo.Enums;
+
+namespace MarsRoverDemo.PositionClass
 {
     public class Direction
     {

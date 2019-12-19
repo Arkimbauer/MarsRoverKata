@@ -1,4 +1,7 @@
-namespace MarsRoverDemo
+using MarsRoverDemo.Enums;
+using MarsRoverDemo.PositionClass;
+
+namespace MarsRoverDemo.StrategyPatterns
 {
     public class FLightModeNavigate : INavigate
     {

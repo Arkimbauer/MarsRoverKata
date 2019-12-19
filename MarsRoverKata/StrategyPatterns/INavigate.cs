@@ -1,4 +1,4 @@
-namespace MarsRoverDemo
+namespace MarsRoverDemo.StrategyPatterns
 {
     public interface INavigate
     {

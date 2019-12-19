@@ -1,4 +1,4 @@
-namespace MarsRoverDemo
+namespace MarsRoverDemo.Enums
 {
     public enum Compass
     {

@@ -1,4 +1,4 @@
-namespace MarsRoverDemo
+namespace MarsRoverDemo.PositionClass
 {
     public class Axis
     {

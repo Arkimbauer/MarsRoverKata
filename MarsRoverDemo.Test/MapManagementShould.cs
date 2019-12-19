@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using MarsRoverDemo.Enums;
+using MarsRoverDemo.PositionClass;
+using MarsRoverDemo.StrategyPatterns;
 using Xunit;
             
 namespace MarsRoverDemo.Test

@@ -1,4 +1,6 @@
-namespace MarsRoverDemo
+using MarsRoverDemo.Enums;
+
+namespace MarsRoverDemo.Factory
 {
     public static class CommandFactory
     {

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using MarsRoverDemo.Enums;
+using MarsRoverDemo.PositionClass;
 
 namespace MarsRoverDemo
 {

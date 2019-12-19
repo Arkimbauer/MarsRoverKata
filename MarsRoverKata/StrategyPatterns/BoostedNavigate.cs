@@ -1,26 +1,28 @@
-using System.Collections.Generic;
+using MarsRoverDemo.Enums;
+using MarsRoverDemo.PositionClass;
 
-namespace MarsRoverDemo
+namespace MarsRoverDemo.StrategyPatterns
 {
-    public class Navigate : INavigate
+    public class BoostedNavigate : INavigate
     {
         private readonly Direction _direction;
         private readonly Axis _axis;
         private readonly MapManagement _mapManagement;
 
-        public Navigate(Compass direction, Axis axis, ObstaclesList obstaclesListList = null)
+        public BoostedNavigate(Compass direction, int positionX, int positionY, ObstaclesList obstaclesListList = null)
         {
-            _axis = axis;
+            _axis = new Axis(positionX, positionY);
             _direction = new Direction(direction);
             _mapManagement = new MapManagement(obstaclesListList);
-        }       
+        }
 
         public void Move()
-        {
+        {   
+            _mapManagement.NavigateTo(_direction, _axis);
             _mapManagement.NavigateTo(_direction, _axis);
         }
 
-        public void TurnRight() 
+        public void TurnRight()
         {
             _direction.TurnRight();
         }
@@ -35,4 +37,4 @@ namespace MarsRoverDemo
             return $"{_axis}:{_direction}";
         }
     }
-}       
+}

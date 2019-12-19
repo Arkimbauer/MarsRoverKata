@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
 using MarsRoverDemo;
+using MarsRoverDemo.Enums;
+using MarsRoverDemo.Factory;
+using MarsRoverDemo.PositionClass;
+using MarsRoverDemo.StrategyPatterns;
 
 namespace MarsRoverDemo
 {

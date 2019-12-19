@@ -1,3 +1,5 @@
+using MarsRoverDemo.Enums;
+using MarsRoverDemo.StrategyPatterns;
 using Xunit;
 
 namespace MarsRoverDemo.Test
