@@ -10,7 +10,7 @@ namespace MarsRoverDemo
             
         public MarsRover(INavigate initialNavigate = null)
         {
-            _navigate = initialNavigate ?? new Navigate(Compass.N, positionX:0, positionY:0);
+            _navigate = initialNavigate ?? new Navigate(Compass.N, new Axis(0,0));
         }
             
         public string Execute(string textCommands)

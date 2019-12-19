@@ -11,7 +11,7 @@ namespace MarsRoverDemo.Test
         {
             _marsRover = new MarsRover();
 
-            var startNavigate = new Navigate(Compass.N, 1, 1);
+            var startNavigate = new Navigate(Compass.N, new Axis(1,1));
             _marsRoverWithStartNavigate = new MarsRover(startNavigate);
         }
 

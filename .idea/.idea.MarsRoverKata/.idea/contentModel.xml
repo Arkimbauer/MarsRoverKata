@@ -13,6 +13,8 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="MarsRoverDemo.Test" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BoostedNavigateShould.cs" t="Include" />
+        <e p="FlightModeNavigateShould.cs" t="Include" />
         <e p="MapManagementShould.cs" t="Include" />
         <e p="MarsRoverDemo.Test.csproj" t="IncludeRecursive" />
         <e p="MarsRoverShould.cs" t="Include" />
@@ -25,12 +27,16 @@
         </e>
       </e>
       <e p="MarsRoverKata" t="IncludeRecursive">
+        <e p="AirZoneManagement.cs" t="Include" />
         <e p="Axis.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BoostedNavigate.cs" t="Include" />
         <e p="CommandFactory.cs" t="Include" />
         <e p="Commands.cs" t="Include" />
         <e p="Compass.cs" t="Include" />
         <e p="Direction.cs" t="Include" />
+        <e p="FLightModeNavigate.cs" t="Include" />
+        <e p="INavigate.cs" t="Include" />
         <e p="MapManagement.cs" t="Include" />
         <e p="MarsMap.cs" t="Include" />
         <e p="MarsRover.cs" t="Include" />
@@ -44,11 +50,13 @@
             </e>
           </e>
         </e>
+        <e p="ObstaclesList.cs" t="Include" />
+        <e p="ObstacleType.cs" t="Include" />
       </e>
       <e p="MarsRoverKata.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_MarsRoverKata.-1848463963.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_MarsRoverKata.-1848463963.00" t="ExcludeRecursive" />
   </component>
 </project>
